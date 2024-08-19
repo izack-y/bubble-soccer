@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact-form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="content-wrapper">
+    <div class="contact-form">
+      <div class="contact-title title-box">
+        <div class="blue-area"></div>
+        <h2>ボルタリング○○店<br>
+             ご意見・お問い合わせフォーム</h2>
+        <p><span>*</span>必須の質問です</p>     
+      </div>
+      <form action="#">
+        <div class="contact-box">
+          <label for="name">お名前<span>*</span></label>
+          <input type="email" id="name" name="your-name">
+        </div>
+    
+        <div class="contact-box">
+          <label for="email">メールアドレス<span>*</span></label>
+          <input type="email" id="email" name="your-email">
+        </div>
+    
+        <div class="contact-box">
+          <label for="phone-number">お電話番号</label>
+          <input type="text" id="phone-number" name="your-number">
+        </div>
+    
+        <div class="contact-box">
+          <label for="message">ご意見/お問い合わせ内容<span>*</span></label>
+          <textarea id="message" name="your-message"></textarea>
+        </div>
+        <input type="submit" class="button" value="送信">
+      </form>
+    </div>
+  </div>
+  
+</body>
+</html>
