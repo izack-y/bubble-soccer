@@ -977,16 +977,18 @@ iframe {
       line-height: 0.7;
       font-weight: 700;
       width:20%;
+      margin-left:5px;
     }
 
     .small-contact-coment {
-      font-size:1.6em;
+      font-size:1.3em;
     }
     .small-contact-number h2 {
-      font-size:0.9em;
+      font-size:0.8em;
     }
     .small-contact-number h1 {
-      font-size:1.3em;
+      font-size:1.0em;
+      text-align: center;
     }
     .small-contact-inquiry {
       font-size:0.7em;
