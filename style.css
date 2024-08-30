@@ -31,12 +31,10 @@ h1 {
 
 h2 {
   font-size: 24px;
-  
 }
 
 h3 {
   font-size: 18px;
-  
 }
 
 
@@ -244,7 +242,6 @@ body {
   .c-menu-trigger {
     width: 30px;
     height: 30px;
-  
   }
   .c-menu-trigger span {
     width: 100%;
@@ -383,63 +380,6 @@ left:0;
 }
 .contact-title p {
   color:red;
-}
-/* フォーム */
-form {
-   width:600px;
-   margin:0 auto;
-}
-form div {
-  margin-bottom:14px;
-}
-.contact-box {
-  background-color: white;
-  width:600px;
-  margin:20px auto;
-  border-radius: 10px;
-  border:lightgrey 2px solid;
-  }
-label {
-  font-size:1.125em;
-  margin-bottom: 10px;
-  display:block;
-  margin-left:20px;
-  padding-top:20px;
-}
-input[type="text"],
-input[type="email"],
-textarea  {
-  border:none;
-  outline: none;
-  border-bottom:2px solid #d3d3d3;
-  padding: 10px;
-  font-size:1rem;
-  margin:20px 20px;
-}
-.contact-form span {
-   color:red;
-}
-input[type="text"],
-input[type="email"] {
-  width:100%;
-  max-width:240px;
-}
-textarea {
-  width:100%;
-  max-width:240px;
-  line-height: 1 rem;
-  resize:none;
-}
-input[type="submit"] {
-   border:none;
-   cursor:pointer;
-   line-height: 1;
-   margin-bottom:20px;
-   font-size:1rem;
-   color:white;
-   background-color: #6f4b3e;
-   padding:10px 20px;
-   border-radius: 5px;
 }
 
 /* strong-point */
@@ -860,6 +800,8 @@ iframe {
 .small-contact-number { 
   border:whitesmoke solid 2px;
   padding:10px;
+  background: #333;
+  color: #fff;
 }
 .small-contact-number h2 {
   font-size:1.1em;
@@ -871,9 +813,49 @@ iframe {
   text-align: center;
   font-size:1.4em;
   font-weight: bold;
+  background:#333;
+  color: #fff;
   padding:15px;
   border: whitesmoke 3px solid;
 }
+.small-contact-inquiry a{
+  color:white
+}
+.small-contact-inquiry{
+  /*キラッと光る基点とするためrelativeを指定*/
+position: relative;
+  /*ボタンの形状*/  
+display:inline-block;
+
+  outline: none;
+  overflow: hidden;
+}
+
+/*キラッと光る*/
+.small-contact-inquiry::before {
+content: '';
+  /*絶対配置でキラッと光るの位置を決める*/
+position: absolute;
+top: 0;
+left: -75%;
+  /*キラッと光る形状*/
+  width: 50%;
+height: 100%;
+background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+transform: skewX(-25deg);
+}
+
+/*hoverした際の移動のアニメーション*/
+.small-contact-inquiry:hover::before {
+animation: shine 0.7s;
+}
+
+@keyframes shine {
+100% {
+  left: 125%;
+}
+}
+
 .another-contact a {
   font-size:1.4em;
   font-weight: 700;
