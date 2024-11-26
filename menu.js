@@ -5,8 +5,8 @@ $(function(){
   $('.c-menu-trigger').each(function(){
     $(this).on('click',function(){
       if( flag == 0){
+  // スクロール位置を取得するためには scrollTop() メソッドを使います。 ブラウザ全体のスクロール位置を取得する。
         winScrollTop = $(window).scrollTop(); 
-        // スクロール位置を取得するためには scrollTop() メソッドを使います。 scrollTop () メソッドは戻り値として、水平方向のスクロール位置を返します。
         $(".c-menu-trigger").addClass('active');
         $(".menu-wrapper").fadeIn();
         flag = "1";
@@ -51,7 +51,7 @@ $(function(){
     bar.each(function() {
       // .bar のオフセットの高さを取得
       const targetPop = $(".bar").offset().top;
-      // 画面のスクロール量 + 350px > .bar のオフセットの高さを取得
+      // 画面のスクロール量 *3.05 > .bar のオフセットの高さを取得
       if ($(window).scrollTop()*3.05 > targetPop) {
         // . にクラス .show を追加
         $(".bar").addClass("show");
